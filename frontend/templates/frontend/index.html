@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recnik</title>
+    <meta charset="utf-8">
+    {% load static %}
+    <link href="{% static "frontend/style.css" %}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Recnik</title>
 </head>
 <body>
-  <section class="section">
-    <div class="container">
-          <div id="app" class="columns"><!-- React --></div>
+    <div id="app">
+
     </div>
-  </section>
 </body>
-{% load static %}
+
 <script src="{% static "frontend/main.js" %}"></script>
 </html>
