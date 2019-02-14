@@ -82,3 +82,8 @@ html, body, #app {
 .halfColumn {
     flex: 50%;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

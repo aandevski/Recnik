@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 export const Header = () => (
     <header>
@@ -8,8 +8,8 @@ export const Header = () => (
         </section>
         <section id="headerRight">
             <ul>
-                <li>Почетна</li>
-                <li>Речник</li>
+                <li><Link to="/">Почетна</Link></li>
+                <li><Link to="/recnik">Речник</Link></li>
                 <li>Калкулатор</li>
                 <li>Контакт</li>
             </ul>
