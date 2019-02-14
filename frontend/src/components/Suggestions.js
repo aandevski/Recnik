@@ -6,8 +6,11 @@ export const Suggestions = (props) => {
         return <li key={index}><Link to={"/recnik/" + word}>{word}</Link></li>;
     });
     return (
-        <ul>
-            {words}
-        </ul>
+        <div>
+            {(words.length > 0)?"Дали мислите на:":""}
+            <ul>
+                {words}
+            </ul>
+        </div>
     );
 };

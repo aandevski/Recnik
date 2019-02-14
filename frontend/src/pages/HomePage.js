@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {RecnikContainer} from "../containers/RecnikContainer";
+import {CalculatorContainer} from "../containers/CalculatorContainer";
 
 export const HomePage = () => (
     <div className="row">
@@ -8,7 +9,7 @@ export const HomePage = () => (
             <RecnikContainer/>
         </div>
         <div className="halfColumn">
-            Cb
+            <CalculatorContainer/>
         </div>
     </div>
 );
