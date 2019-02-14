@@ -14,15 +14,10 @@ export class SuggestionsContainer extends React.Component {
 
     loadWords() {
         Repository.getWords(this.props.query).then(d => {
-            console.log(d);
             this.setState({
                 words: d
             });
         });
-    }
-
-    componentDidMount() {
-        this.loadWords();
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -32,7 +27,7 @@ export class SuggestionsContainer extends React.Component {
     }
 
     render() {
-        return (this.state.words)?<Suggestions words={this.state.words} />:'';
+        return (this.state.words)?<Suggestions selectWord={this.props.selectWord} words={this.state.words} />:'';
     }
 
 

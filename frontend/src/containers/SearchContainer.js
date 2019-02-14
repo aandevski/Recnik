@@ -22,7 +22,7 @@ export class SearchContainer extends React.Component {
         return (
             <div>
                 <Search inputText={this.state.searchField} inputChangeFunction={this.searchTextChange} />
-                <SuggestionsContainer query={this.state.searchField}/>
+                <SuggestionsContainer query={this.state.searchField} selectWord={this.props.selectWord}/>
             </div>
         );
     }
