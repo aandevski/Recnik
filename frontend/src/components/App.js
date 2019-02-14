@@ -1,17 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Header } from "./Header";
-import { MainContent } from "./MainContent";
+import { HomePage } from "./HomePage";
 import { Footer } from "./Footer";
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 const App = () => (
-    <div id="main">
-        <div className="container" id="topPart">
-            <Header />
-            <MainContent />
+    <BrowserRouter>
+        <div id="main">
+            <div className="container" id="topPart">
+                <Header />
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                </Switch>
+            </div>
+            <Footer />
         </div>
-        <Footer />
-    </div>
+    </BrowserRouter>
 );
 
 const wrapper = document.getElementById("app");

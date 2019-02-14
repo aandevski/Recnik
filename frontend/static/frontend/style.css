@@ -74,3 +74,11 @@ html, body, #app {
     padding: 0;
     height: 100%;
 }
+
+.row {
+    display: flex;
+}
+
+.halfColumn {
+    flex: 50%;
+}
