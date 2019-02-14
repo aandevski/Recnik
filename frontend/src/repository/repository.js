@@ -21,11 +21,18 @@ export class Repository {
     }
 
     static getWord(query) {
-        console.log("Called repo getword with " + query);
         const url = '/api/word/' + query;
 
         return fetch(url).then(handleResponse).then(jsonResponse => {
             return jsonResponse;
+        }).catch(handleError);
+    }
+
+    static getCalculation(positives, negatives) {
+        const url = '/api/calculate/' + positives.join(',') + '/' + negatives.join(',');
+
+        return fetch(url).then(handleResponse).then(jsonResponse => {
+            return jsonResponse.results;
         }).catch(handleError);
     }
 }
