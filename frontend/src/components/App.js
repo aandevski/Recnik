@@ -6,12 +6,9 @@ import { Footer } from "./Footer";
 
 const App = () => (
     <div id="main">
-        <div id="topPart">
-            <div class="container">
-                <Header />
-                <MainContent />
-                <div id="push"></div>
-            </div>
+        <div className="container" id="topPart">
+            <Header />
+            <MainContent />
         </div>
         <Footer />
     </div>
