@@ -15,8 +15,21 @@ export class RecnikContainer extends React.Component {
     }
 
     componentDidMount() {
-        if(this.props.match.params.word) {
-            this.selectWord(this.props.match.params.word);
+        if(this.props.word) {
+            this.selectWord(this.props.word);
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.word !== this.props.word) {
+            if(this.props.word)
+                this.selectWord(this.props.word);
+            else {
+                this.setState({
+                   currentWord: null,
+                   related: []
+                });
+            }
         }
     }
 
@@ -30,7 +43,11 @@ export class RecnikContainer extends React.Component {
     }
 
     render() {
-        return (this.state.currentWord)?<RecnikWord word={this.state.currentWord} related={this.state.related} />:<SearchContainer selectWord={this.selectWord}/>;
+        return (
+            <div className="row">
+                {(this.state.currentWord)?<RecnikWord word={this.state.currentWord} related={this.state.related} />:<SearchContainer selectWord={this.selectWord}/>}
+            </div>
+        )
     }
 
 

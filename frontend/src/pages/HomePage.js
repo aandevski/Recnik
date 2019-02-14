@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {RecnikContainer} from "../containers/RecnikContainer";
 
 export const HomePage = () => (
     <div className="row">
         <div className="halfColumn">
-            Ca
+            <RecnikContainer/>
         </div>
         <div className="halfColumn">
             Cb
